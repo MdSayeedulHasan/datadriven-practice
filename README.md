@@ -9,7 +9,7 @@ Scored work from [DataDriven](https://datadriven.io/u/true_jay_7289), committed 
 | Problem | Domain | Difficulty | Solved |
 |---|---|---|---|
 | [Before They Walk](./practice/sql/before-they-walk) | SQL | Medium | 2026-11-18 |
-| [Above Average Interactions](./practice/sql/above-average-interactions) | SQL | Medium | 2026-10-23 |
+| [Above Average Interactions](./practice/sql/above-average-interactions) | SQL | Easy | 2026-10-23 |
 
 <!-- datadriven:index:end -->
 
