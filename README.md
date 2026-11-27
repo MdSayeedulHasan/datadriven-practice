@@ -8,6 +8,7 @@ Scored work from [DataDriven](https://datadriven.io/u/true_jay_7289), committed 
 
 | Problem | Domain | Difficulty | Solved |
 |---|---|---|---|
+| [Where Everyone Was](./practice/data_modeling/where-everyone-was) | Data Modeling | Easy | 2026-11-27 |
 | [A Number for the Seller](./practice/data_modeling/a-number-for-the-seller) | Data Modeling | Easy | 2026-11-27 |
 | [Still Standing](./practice/spark/still-standing) | Spark | Medium | 2026-11-23 |
 | [Cheapest Cost Per Region](./practice/spark/cheapest-cost-per-region) | Spark | Easy | 2026-11-23 |
