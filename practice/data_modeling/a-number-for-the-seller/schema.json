@@ -1,0 +1,142 @@
+{
+  "tables": [
+    {
+      "name": "dim_product",
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "BIGINT",
+          "key": "pk"
+        },
+        {
+          "name": "seller_id",
+          "type": "BIGINT",
+          "key": "fk"
+        },
+        {
+          "name": "listed_date",
+          "type": "DATE"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATE"
+        }
+      ]
+    },
+    {
+      "name": "dim_seller",
+      "columns": [
+        {
+          "name": "seller_id",
+          "type": "BIGINT",
+          "key": "pk"
+        },
+        {
+          "name": "seller_name",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "created_at",
+          "type": "DATE"
+        }
+      ]
+    },
+    {
+      "name": "dim_date",
+      "columns": [
+        {
+          "name": "day_key",
+          "type": "DATE",
+          "key": "pk"
+        }
+      ]
+    },
+    {
+      "name": "sales",
+      "columns": [
+        {
+          "name": "sales_line_id",
+          "type": "BIGINT",
+          "key": "pk"
+        },
+        {
+          "name": "order_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "product_id",
+          "type": "BIGINT",
+          "key": "fk"
+        },
+        {
+          "name": "seller_id",
+          "type": "BIGINT",
+          "key": "fk"
+        },
+        {
+          "name": "sale_date",
+          "type": "DATE",
+          "key": "fk"
+        },
+        {
+          "name": "unit sold",
+          "type": "INT"
+        },
+        {
+          "name": "revenue",
+          "type": "DECIMAL"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": {
+        "table": "dim_product",
+        "column": "seller_id"
+      },
+      "to": {
+        "table": "dim_seller",
+        "column": "seller_id"
+      },
+      "foreign_key": true
+    },
+    {
+      "from": {
+        "table": "sales",
+        "column": "seller_id"
+      },
+      "to": {
+        "table": "dim_seller",
+        "column": "seller_id"
+      },
+      "foreign_key": true
+    },
+    {
+      "from": {
+        "table": "sales",
+        "column": "product_id"
+      },
+      "to": {
+        "table": "dim_product",
+        "column": "product_id"
+      },
+      "foreign_key": true
+    },
+    {
+      "from": {
+        "table": "sales",
+        "column": "sale_date"
+      },
+      "to": {
+        "table": "dim_date",
+        "column": "day_key"
+      },
+      "foreign_key": true
+    }
+  ]
+}
